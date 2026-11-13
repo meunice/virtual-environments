@@ -44,22 +44,36 @@ body:
       label: URL for tool's homepage
   - type: textarea
     attributes:
-      label: Provide a basic test case to validate the tool's functionality. 
+      label: Provide a basic test case to validate the tool's functionality.
       description: This will be automatically formatted into code.
       render: bash
   - type: checkboxes
     attributes:
-      label: Virtual environments affected
+      label: Platforms where you need the tool
       options:
-        - label: Ubuntu 18.04
-        - label: Ubuntu 20.04
-        - label: macOS 10.15
-        - label: macOS 11
-        - label: Windows Server 2016
-        - label: Windows Server 2019
+        - label: Azure DevOps
+        - label: GitHub Actions
+  - type: checkboxes
+    attributes:
+      label: Runner images where you need the tool
+      options:
+        - label: Ubuntu 22.04
+        - label: Ubuntu 22.04 Arm64
+        - label: Ubuntu 24.04
+        - label: Ubuntu 24.04 Arm64
+        - label: Ubuntu 26.04
+        - label: Ubuntu 26.04 Arm64
+        - label: Ubuntu Slim
+        - label: macOS 14
+        - label: macOS 15
+        - label: macOS 15 Arm64
+        - label: macOS 26
+        - label: macOS 26 Arm64
+        - label: Xcode 27 Arm64
         - label: Windows Server 2022
-    validations:
-      required: true
+        - label: Windows Server 2025
+        - label: Windows Server 2025 with Visual Studio 2026
+        - label: Windows Desktop 11 with Visual Studio 2026
   - type: textarea
     attributes:
       label: Can this tool be installed during the build?
